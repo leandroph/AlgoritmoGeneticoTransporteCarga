@@ -10,8 +10,15 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * Aplicação de algoritmos genéticos aplicados na logística. Melhor ocupação da
+ * capacidade de carga do veículo de transporte.
  *
- * @author Leandro
+ * Trabalho avaliativo da disciplina de Inteligência Artificial Ciência da
+ * Computação - UNIJUÍ - 1º Semestre/2018
+ *
+ * @author Cristiano Künas
+ * @author Elison Christoph
+ * @author Leandro Heck
  */
 public class AlgoritmoGenetico {
 
@@ -21,11 +28,21 @@ public class AlgoritmoGenetico {
     private Individuo melhorSolucao;
     private List melhoresCromossomos = new ArrayList<>();
 
+    /**
+     *
+     * @param tamanhoPopulacao
+     */
     public AlgoritmoGenetico(int tamanhoPopulacao) {
         this.tamanhoPopulacao = tamanhoPopulacao;
     }
 
-    //metodo para inicializar a população
+    /**
+     * Método para inicializar a população
+     *
+     * @param espacos
+     * @param valores
+     * @param limiteEspacos
+     */
     public void inicializaPopulacao(List espacos, List valores, Double limiteEspacos) {
         for (int i = 0; i < tamanhoPopulacao; i++) {
             this.populacao.add(new Individuo(espacos, valores, limiteEspacos));
@@ -33,17 +50,31 @@ public class AlgoritmoGenetico {
         this.melhorSolucao = this.populacao.get(0);
     }
 
+    /**
+     * Método para ordenar a população
+     */
     public void ordenaPopulacao() {
         Collections.sort(this.populacao);
     }
 
-    public void melhorIndividuo(Individuo individuo) {// verifica quem é o melhor individuo da população
-        if (individuo.getNotaAvaliacao() > this.melhorSolucao.getNotaAvaliacao()) {// atualiza o melhor individuo
-            //se o individuo passado como parametro tiver uma melhor nota que o outro, ele assume como melhor individuo
+    /**
+     * Método que verifica quem é o melhor individuo da população atualiza o
+     * melhor individuo se o individuo passado como parametro tiver uma melhor
+     * nota que o outro, ele assume como melhor individuo
+     *
+     * @param individuo
+     */
+    public void melhorIndividuo(Individuo individuo) {
+        if (individuo.getNotaAvaliacao() > this.melhorSolucao.getNotaAvaliacao()) {
             this.melhorSolucao = individuo;
         }
     }
 
+    /**
+     * Método que retorna a soma avaliação
+     *
+     * @return
+     */
     public Double somaAvalicao() {
         Double soma = 0.0;
 
@@ -53,6 +84,10 @@ public class AlgoritmoGenetico {
         return soma;
     }
 
+    /**
+     * @param somaAvalicao
+     * @return
+     */
     public int selcionaPai(Double somaAvalicao) {
         int pai = -1;// retorna um valor invalido, usado apenas  pra inicializar a variavel
 
@@ -68,10 +103,15 @@ public class AlgoritmoGenetico {
         return pai;
     }
 
+    /**
+     * Método visualiza geração pega o melhor individuo, presumindo que ja se
+     * tenha feito a ordenação da população adiciona o melhor individio a lista
+     * melhorCromossomos
+     */
     public void visualizaGeracao() {
-        Individuo melhor = this.populacao.get(0);//pega o melhor individuo, presumindo que ja se tenha feito a ordenação da população
-        this.melhoresCromossomos.add(melhor);//adiciona o melhor individio a lista melhorCromossomos
-        
+        Individuo melhor = this.populacao.get(0);
+        this.melhoresCromossomos.add(melhor);
+
         System.out.println("G " + this.populacao.get(0).getGeracao()
                 + "\nValor " + melhor.getNotaAvaliacao()
                 + "\nEspaço " + melhor.getEspacoUsado()
@@ -79,6 +119,15 @@ public class AlgoritmoGenetico {
 
     }
 
+    /**
+     *
+     * @param taxaMutacao
+     * @param numeroGeracoes
+     * @param espacos
+     * @param valores
+     * @param limiteespacos
+     * @return
+     */
     public List resolver(Double taxaMutacao, int numeroGeracoes, List espacos, List valores,
             Double limiteespacos) {
 
@@ -121,46 +170,86 @@ public class AlgoritmoGenetico {
                 +//pega a melhor nota
                 "\nEspaco : " + this.melhorSolucao.getEspacoUsado()
                 + "\nCromossomo : " + this.melhorSolucao.getCromossomo());
-        
+
         return this.melhorSolucao.getCromossomo();
     }
 
+    /**
+     *
+     * @return
+     */
     public List getMelhoresCromossomos() {
         return melhoresCromossomos;
     }
 
+    /**
+     *
+     * @param melhoresCromossomos
+     */
     public void setMelhoresCromossomos(List melhoresCromossomos) {
         this.melhoresCromossomos = melhoresCromossomos;
     }
-     
+
+    /**
+     *
+     * @return
+     */
     public int getTamanhoPopulacao() {
         return tamanhoPopulacao;
     }
 
+    /**
+     *
+     * @param tamanhoPopulacao
+     */
     public void setTamanhoPopulacao(int tamanhoPopulacao) {
         this.tamanhoPopulacao = tamanhoPopulacao;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Individuo> getPopulacao() {
         return populacao;
     }
 
+    /**
+     *
+     * @param populacao
+     */
     public void setPopulacao(List<Individuo> populacao) {
         this.populacao = populacao;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getGeracao() {
         return geracao;
     }
 
+    /**
+     *
+     * @param geracao
+     */
     public void setGeracao(int geracao) {
         this.geracao = geracao;
     }
 
+    /**
+     *
+     * @return
+     */
     public Individuo getMelhorSolucao() {
         return melhorSolucao;
     }
 
+    /**
+     *
+     * @param melhorSolucao
+     */
     public void setMelhorSolucao(Individuo melhorSolucao) {
         this.melhorSolucao = melhorSolucao;
     }

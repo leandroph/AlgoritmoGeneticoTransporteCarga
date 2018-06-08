@@ -10,8 +10,15 @@ import java.util.List;
 import org.jfree.ui.RefineryUtilities;
 
 /**
- *
- * @author Leandro
+ * Aplicação de algoritmos genéticos aplicados na logística. Melhor ocupação
+ * da capacidade de carga do veículo de transporte.
+ * 
+ * Trabalho avaliativo da disciplina de Inteligência Artificial
+ * Ciência da Computação - UNIJUÍ - 1º Semestre/2018
+ * 
+ * @author Cristiano Künas
+ * @author Elison Christoph
+ * @author Leandro Heck
  */
 public class StartApp {
 
@@ -58,7 +65,7 @@ public class StartApp {
         listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));
         listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));//35 produtos
 
-//cria as lista para trabalhar com a classe Individuo
+        //cria as lista para trabalhar com a classe Individuo
         List espacos = new ArrayList<>();
         List valores = new ArrayList<>();
         List nomes = new ArrayList<>();

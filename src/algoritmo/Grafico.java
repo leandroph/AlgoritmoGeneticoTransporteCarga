@@ -19,15 +19,22 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
 
 /**
+ * Aplicação de algoritmos genéticos aplicados na logística. Melhor ocupação
+ * da capacidade de carga do veículo de transporte.
  * 
- * @author Leandro
- * @author Cristiano
- * @
+ * Trabalho avaliativo da disciplina de Inteligência Artificial
+ * Ciência da Computação - UNIJUÍ - 1º Semestre/2018
+ * 
+ * @author Cristiano Künas
+ * @author Elison Christoph
+ * @author Leandro Heck
  */
 public class Grafico extends ApplicationFrame{//cria uma janela para a visualização do gráfico
     
     private List<Individuo> melhoresCromossomos = new ArrayList<>();
+    
     /**
+     * Método que define o gráfico
      * 
      * @param tituloJanela
      * @param tituloGrafico
@@ -59,6 +66,10 @@ public class Grafico extends ApplicationFrame{//cria uma janela para a visualiza
         setContentPane(janelaGrafico);
     }
     
+    /**
+     * Método para carregar dados
+     * @return 
+     */
     private DefaultCategoryDataset carregarDados(){//usado para mostrar os resultados em um gráfico
         DefaultCategoryDataset dados = new DefaultCategoryDataset();
         for (int i = 0; i < melhoresCromossomos.size(); i++) {
