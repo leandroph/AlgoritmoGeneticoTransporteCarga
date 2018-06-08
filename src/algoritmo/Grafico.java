@@ -18,6 +18,7 @@ import org.jfree.chart.renderer.category.LineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
 
+
 /**
  * Aplicação de algoritmos genéticos aplicados na logística. Melhor ocupação
  * da capacidade de carga do veículo de transporte.
