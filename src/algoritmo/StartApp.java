@@ -23,6 +23,7 @@ import org.jfree.ui.RefineryUtilities;
 public class StartApp {
 
     /**
+     * Método main para execução da aplicação
      * @param args the command line arguments
      */
     public static void main(String[] args) {

@@ -38,7 +38,7 @@ public class Produto {
     /**
      * Método que retorna o nome do produto.
      *
-     * @return
+     * @return nome
      */
     public String getNome() {
         return nome;
@@ -56,7 +56,7 @@ public class Produto {
     /**
      * Método que retorna o espaço utilizado pelo produto.
      *
-     * @return
+     * @return espaço
      */
     public Double getEspaco() {
         return espaco;
@@ -74,7 +74,7 @@ public class Produto {
     /**
      * Método que retorna o valor do produto.
      *
-     * @return
+     * @return valor
      */
     public Double getValor() {
         return valor;

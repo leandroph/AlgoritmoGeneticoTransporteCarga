@@ -29,7 +29,7 @@ public class AlgoritmoGenetico {
     private List melhoresCromossomos = new ArrayList<>();
 
     /**
-     *
+     * Construtor da classe AlgoritmoGenetico
      * @param tamanhoPopulacao
      */
     public AlgoritmoGenetico(int tamanhoPopulacao) {
@@ -73,7 +73,7 @@ public class AlgoritmoGenetico {
     /**
      * Método que retorna a soma avaliação
      *
-     * @return
+     * @return soma
      */
     public Double somaAvalicao() {
         Double soma = 0.0;
@@ -86,7 +86,7 @@ public class AlgoritmoGenetico {
 
     /**
      * @param somaAvalicao
-     * @return
+     * @return pai
      */
     public int selcionaPai(Double somaAvalicao) {
         int pai = -1;// retorna um valor invalido, usado apenas  pra inicializar a variavel
@@ -120,13 +120,13 @@ public class AlgoritmoGenetico {
     }
 
     /**
-     *
+     * Resolver do algoritmo genético
      * @param taxaMutacao
      * @param numeroGeracoes
      * @param espacos
      * @param valores
      * @param limiteespacos
-     * @return
+     * @return cromossomo da melhor solução
      */
     public List resolver(Double taxaMutacao, int numeroGeracoes, List espacos, List valores,
             Double limiteespacos) {
@@ -175,15 +175,15 @@ public class AlgoritmoGenetico {
     }
 
     /**
-     *
-     * @return
+     * Método que retorna os melhores cromossomos
+     * @return melhores cromossomos
      */
     public List getMelhoresCromossomos() {
         return melhoresCromossomos;
     }
 
     /**
-     *
+     * Método para setar os melhores cromossomos
      * @param melhoresCromossomos
      */
     public void setMelhoresCromossomos(List melhoresCromossomos) {
@@ -191,15 +191,15 @@ public class AlgoritmoGenetico {
     }
 
     /**
-     *
-     * @return
+     * Método que retorna o tamanho da população
+     * @return tamanho população
      */
     public int getTamanhoPopulacao() {
         return tamanhoPopulacao;
     }
 
     /**
-     *
+     * Método para setar o tamanho da população
      * @param tamanhoPopulacao
      */
     public void setTamanhoPopulacao(int tamanhoPopulacao) {
@@ -207,15 +207,15 @@ public class AlgoritmoGenetico {
     }
 
     /**
-     *
-     * @return
+     * Retorna a população
+     * @return população
      */
     public List<Individuo> getPopulacao() {
         return populacao;
     }
 
     /**
-     *
+     * Método para setar a população
      * @param populacao
      */
     public void setPopulacao(List<Individuo> populacao) {
@@ -223,15 +223,15 @@ public class AlgoritmoGenetico {
     }
 
     /**
-     *
-     * @return
+     * Método que retorna a geração
+     * @return geração
      */
     public int getGeracao() {
         return geracao;
     }
 
     /**
-     *
+     * Método para setar a geração
      * @param geracao
      */
     public void setGeracao(int geracao) {
@@ -239,15 +239,15 @@ public class AlgoritmoGenetico {
     }
 
     /**
-     *
-     * @return
+     * Retorna a melhor solução
+     * @return melhor solução
      */
     public Individuo getMelhorSolucao() {
         return melhorSolucao;
     }
 
     /**
-     *
+     * Método para setar a melhor solução
      * @param melhorSolucao
      */
     public void setMelhorSolucao(Individuo melhorSolucao) {

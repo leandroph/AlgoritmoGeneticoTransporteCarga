@@ -93,7 +93,7 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
      * Seta o cromossomo de cada filho
      * 
      * @param outroIndividuo
-     * @return 
+     * @return filhos
      */
     public List crossover(Individuo outroIndividuo) {
         int corte = (int) Math.round(Math.random() * cromossomo.size());
@@ -123,7 +123,7 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
      * Método que realiza a mutação
      * 
      * @param taxaMutacao
-     * @return 
+     * @return o proprio objeto
      */
     public Individuo mutacao(Double taxaMutacao){
         //System.out.println("Antes da mutação " + this.cromossomo);
@@ -143,7 +143,7 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
 
     /**
      * Método que retorna o espaço usado.
-     * @return 
+     * @return espaço usado
      */
     public Double getEspacoUsado() {
         return espacoUsado;
@@ -159,7 +159,7 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
 
     /**
      * Método que retorna a lista de espaços.
-     * @return 
+     * @return espaços
      */
     public List getEspacos() {
         return espacos;
@@ -174,15 +174,15 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
     }
 
     /**
-     * 
-     * @return 
+     * Método que retorna o valor
+     * @return valores
      */
     public List getValores() {
         return valores;
     }
 
     /**
-     * 
+     * Método para atribuir valor
      * @param valores 
      */
     public void setValores(List valores) {
@@ -190,15 +190,15 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
     }
 
     /**
-     * 
-     * @return 
+     * Método que retorna o limite de espaços
+     * @return limite espaços
      */
     public Double getLimiteEspacos() {
         return limiteEspacos;
     }
 
     /**
-     * 
+     * Método para setar limite de espaços
      * @param limiteEspacos 
      */
     public void setLimiteEspacos(Double limiteEspacos) {
@@ -206,15 +206,15 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
     }
 
     /**
-     * 
-     * @return 
+     * Método que retorna nota avaliação
+     * @return nota avaliação
      */
     public Double getNotaAvaliacao() {
         return notaAvaliacao;
     }
 
     /**
-     * 
+     * Método para atribuir nota avaliação
      * @param notaAvaliacao 
      */
     public void setNotaAvaliacao(Double notaAvaliacao) {
@@ -222,15 +222,15 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
     }
 
     /**
-     * 
-     * @return 
+     * Método que retorna a geração
+     * @return geração
      */
     public int getGeracao() {
         return geracao;
     }
 
     /**
-     * 
+     * Método para setar a geração
      * @param geracao 
      */
     public void setGeracao(int geracao) {
@@ -238,15 +238,15 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
     }
 
     /**
-     * 
-     * @return 
+     * Método que retorna a lista de cromossomos.
+     * @return cromossomo
      */
     public List getCromossomo() {
         return cromossomo;
     }
 
     /**
-     * 
+     * Método para setar um cromossomo.
      * @param cromossomo 
      */
     public void setCromossomo(List cromossomo) {
@@ -254,9 +254,9 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
     }
 
     /**
-     * 
-     * @param o
-     * @return 
+     * Método para comparação.
+     * @param o 
+     * @return int 
      */
     @Override
     public int compareTo(Individuo o) {

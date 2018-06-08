@@ -39,7 +39,6 @@ public class Grafico extends ApplicationFrame{//cria uma janela para a visualiza
      * @param tituloJanela
      * @param tituloGrafico
      * @param melhores 
-     * Método para gerar o gráfico 
      */
     public Grafico(String tituloJanela, String tituloGrafico, List melhores){
         super(tituloJanela);
@@ -68,7 +67,7 @@ public class Grafico extends ApplicationFrame{//cria uma janela para a visualiza
     
     /**
      * Método para carregar dados
-     * @return 
+     * @return dados
      */
     private DefaultCategoryDataset carregarDados(){//usado para mostrar os resultados em um gráfico
         DefaultCategoryDataset dados = new DefaultCategoryDataset();
