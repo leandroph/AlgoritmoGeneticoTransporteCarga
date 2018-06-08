@@ -23,26 +23,40 @@ public class StartApp {
         // cria uma lista de Produto que vai receber todos os produtos
         List<Produto> listaProdutos = new ArrayList<>();
         listaProdutos.add(new Produto("Geladeira Dako", 0.751, 999.90));
+        listaProdutos.add(new Produto("Geladeira Dako", 0.751, 999.90));
         listaProdutos.add(new Produto("IPhone 6", 0.0000899, 2199.12));
         listaProdutos.add(new Produto("IPhone 6", 0.0000899, 2199.12));
+        listaProdutos.add(new Produto("IPhone 6", 0.0000899, 2199.12));
+        listaProdutos.add(new Produto("IPhone 6", 0.0000899, 2199.12));
+        listaProdutos.add(new Produto("TV 55'", 0.400, 4346.99));
+        listaProdutos.add(new Produto("TV 55'", 0.400, 4346.99));
         listaProdutos.add(new Produto("TV 55'", 0.400, 4346.99));
         listaProdutos.add(new Produto("TV 50'", 0.290, 3999.90));
         listaProdutos.add(new Produto("TV 50'", 0.290, 3999.90));
         listaProdutos.add(new Produto("TV 50'", 0.290, 3999.90));
         listaProdutos.add(new Produto("TV 42'", 0.200, 2999.90));
+        listaProdutos.add(new Produto("TV 42'", 0.200, 2999.90));
+        listaProdutos.add(new Produto("TV 42'", 0.200, 2999.90));
+        listaProdutos.add(new Produto("Notebook Dell", 0.00350, 2499.90));
+        listaProdutos.add(new Produto("Notebook Dell", 0.00350, 2499.90));
         listaProdutos.add(new Produto("Notebook Dell", 0.00350, 2499.90));
         listaProdutos.add(new Produto("Ventilador Panasonic", 0.496, 199.90));
         listaProdutos.add(new Produto("Ventilador Panasonic", 0.496, 199.90));
         listaProdutos.add(new Produto("Microondas Eletrolux", 0.0424, 308.66));
+        listaProdutos.add(new Produto("Microondas LG", 0.0544, 429.90));
+        listaProdutos.add(new Produto("Microondas LG", 0.0544, 429.90));
         listaProdutos.add(new Produto("Microondas LG", 0.0544, 429.90));
         listaProdutos.add(new Produto("Microondas Panasonic", 0.0319, 299.29));
         listaProdutos.add(new Produto("Geladeira Brastemp", 0.635, 849.00));
         listaProdutos.add(new Produto("Geladeira Consul", 0.870, 1199.89));
         listaProdutos.add(new Produto("Geladeira Consul", 0.870, 1199.89));
         listaProdutos.add(new Produto("Notebook Lenovo", 0.498, 1999.90));
+        listaProdutos.add(new Produto("Notebook Lenovo", 0.498, 1999.90));
+        listaProdutos.add(new Produto("Notebook Lenovo", 0.498, 1999.90));
+        listaProdutos.add(new Produto("Notebook Lenovo", 0.498, 1999.90));
         listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));
         listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));
-        listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));//21 produtos
+        listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));//35 produtos
 
 //cria as lista para trabalhar com a classe Individuo
         List espacos = new ArrayList<>();
@@ -53,7 +67,7 @@ public class StartApp {
             espacos.add(produto.getEspaco());// adiciona o valor do espaço do produto a variavel espaço
             valores.add(produto.getValor());// adiciona o valor do produto na varialvel valor
             nomes.add(produto.getNome());// adiociona o nome do produto  a variavel nome
-
+            
         }
 
         Double limite = 10.0;//limite total da carga que seria de 3m³
