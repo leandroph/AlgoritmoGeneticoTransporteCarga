@@ -22,6 +22,8 @@ public class Individuo implements Comparable<Individuo>{ // assim é possivel fa
     private int geracao;
     private List cromossomo = new ArrayList<>(); // aqui ficara a solução do problema
 
+    //Método construtor da classe que recebe os espaços 
+     
     public Individuo(List espacos, List valores, Double limiteEspacos) {
         this.espacos = espacos;
         this.valores = valores;

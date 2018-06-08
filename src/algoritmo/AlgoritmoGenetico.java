@@ -16,7 +16,7 @@ import java.util.List;
 public class AlgoritmoGenetico {
 
     private int tamanhoPopulacao;
-    private List<Individuo> populacao = new ArrayList<>();// amrmaza dentro da lista todos os individuos da população
+    private List<Individuo> populacao = new ArrayList<>();// armazena dentro da lista todos os individuos da população
     private int geracao;
     private Individuo melhorSolucao;
     private List melhoresCromossomos = new ArrayList<>();
