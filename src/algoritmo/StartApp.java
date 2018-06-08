@@ -67,7 +67,6 @@ public class StartApp {
             espacos.add(produto.getEspaco());// adiciona o valor do espaço do produto a variavel espaço
             valores.add(produto.getValor());// adiciona o valor do produto na varialvel valor
             nomes.add(produto.getNome());// adiociona o nome do produto  a variavel nome
-            
         }
 
         Double limite = 10.0;//limite total da carga que seria de 3m³
