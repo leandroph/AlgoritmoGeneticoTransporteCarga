@@ -4,4 +4,4 @@
 
 #1º semestre/2018
 
-#UNIJUÍ - Universidade Regional do Noroeste do Estado do Rio Grande do Sul
+#UNIJUÍ - Universidade Regional do Noroeste do Estado do Rio Grande do Sul - RS
