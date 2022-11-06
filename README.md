@@ -7,4 +7,4 @@
 #UNIJUÍ - Universidade Regional do Noroeste do Estado do Rio Grande do Sul - RS
 
 
-Co-authored-by:Cristiano Alex Künas<cakunas@inf.ufrgs.br>
+
